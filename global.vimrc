@@ -147,8 +147,8 @@ fun! Retab4()
 	:IndentGuidesEnable
 endfun
 
-nmap s2 :call Retab2()<cr>
-nmap s4 :call Retab4()<cr>
+nmap <leader>s2 :call Retab2()<cr>
+nmap <leader>s4 :call Retab4()<cr>
 
 " Good undo / redo
 nmap <silent> <u> :undo<cr>

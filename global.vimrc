@@ -153,3 +153,6 @@ nmap <leader>s4 :call Retab4()<cr>
 " Good undo / redo
 nmap <silent> <u> :undo<cr>
 nmap <silent> <S-U> :redo<cr>
+
+" Terminal exit with esc
+tnoremap <Esc> <C-\><C-n>

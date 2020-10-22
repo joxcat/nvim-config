@@ -112,6 +112,8 @@ Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
 " Auto-import
 Plug 'galooshi/vim-import-js'
+" React JSX
+Plug 'maxmellon/vim-jsx-pretty'
 
 " --- VueJS ---
 Plug 'posva/vim-vue'

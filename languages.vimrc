@@ -1,11 +1,11 @@
 augroup rust
 	fun! RustConfig()
 		set ts=2 sw=2 noet
-		nmap <M-R> :!cargo run<cr>
-		nmap <M-C> :!cargo clippy<cr>
-		nmap <M-B> :!cargo build<cr>
-		nmap <M-S-B> :!cargo build --release<cr>
-		nmap <M-F> :%! rustfmt --config hard_tabs=true<cr>
+		nmap <M-r> :!cargo run<cr>
+		nmap <M-c> :!cargo clippy<cr>
+		nmap <M-b> :!cargo build<cr>
+		nmap <M-S-b> :!cargo build --release<cr>
+		nmap <M-f> :%! rustfmt --config hard_tabs=true<cr>
 	endfun
 	au! WinEnter,BufEnter *.rs call RustConfig()
 augroup END
@@ -24,6 +24,13 @@ augroup json
 		set ts=2 sw=2 noet
 	endfun
 	au! WinEnter,BufEnter *.json call JsonConfig()
+augroup END
+
+augroup yaml
+	fun! YamlConfig()
+		set ts=2 sw=2 et
+	endfun
+	au! WinEnter,BufEnter *.yaml call YamlConfig()
 augroup END
 
 augroup markdown
@@ -53,4 +60,11 @@ augroup nim
 		nmap <C-R> :call RunWithCurrDir('nimble run')<cr>
 	endfun
 	au! WinEnter,BufEnter *.nim call NimConfig()
+augroup END
+
+augroup jsconf
+	fun! JSConfig()
+		set ts=2 sw=2 et
+	endfun
+	au! WinEnter,BufEnter *.js call JSConfig()
 augroup END

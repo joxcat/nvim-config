@@ -111,6 +111,7 @@ endfun
 
 call SetupCommandAlias("scratchpad", "tabedit scratchpad")
 call SetupCommandAlias("type", "set syntax")
+call SetupCommandAlias("open", "$tabedit")
 
 " Allows you to save files you opened without write permissions via sudo
 cmap w!! w !sudo tee %

@@ -106,14 +106,14 @@ Plug 'plasticboy/vim-markdown'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " --- Javascript ---
-" Syntax base
-Plug 'othree/yajs.vim'
 " Syntax ES6
 Plug 'othree/es.next.syntax.vim'
 " Auto-import
 Plug 'galooshi/vim-import-js'
 " React JSX
 Plug 'maxmellon/vim-jsx-pretty'
+" TSX
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 " --- VueJS ---
 Plug 'posva/vim-vue'

@@ -30,7 +30,7 @@ nmap <leader>r :Rg<cr>
 " Context.vim
 " https://github.com/wellle/context.vim "
 let g:context_enabled = 0
-:ContextDisable
+autocmd! WinNew,BufCreate :ContextDisable
 
 " FastFold
 " https://github.com/Konfekt/FastFold "
@@ -119,7 +119,6 @@ let g:LanguageClient_serverCommands = {
 	\ 'rust': ['$HOME/.local/bin/rust-analyser'],
 	\ 'vue': ['vls'],
 	\ 'javascript': ['$HOME/.asdf/shims/javascript-typescript-stdio'],
-	\ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
 	\ 'python': ['$HOME/.asdf/shims/pyls'],
 	\ 'lua.luapad': ['$HOME/.luarocks/bin/lua-lsp'],
 	\ 'lua': ['$HOME/.luarocks/bin/lua-lsp'],

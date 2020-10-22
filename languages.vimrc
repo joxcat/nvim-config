@@ -19,6 +19,14 @@ augroup vue
 	au! filetype vue call VueConfig()
 augroup END
 
+augroup reactTSX
+	fun! ReactTSXConfig()
+		set ts=2 sw=2 noet
+		nmap <M-L> :!yarn lint<cr>
+	endfun
+	au! WinEnter,BufEnter *.tsx call ReactTSXConfig()
+augroup END
+
 augroup json
 	fun! JsonConfig()
 		set ts=2 sw=2 noet

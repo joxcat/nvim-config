@@ -30,7 +30,6 @@ nmap <leader>r :Rg<cr>
 " Context.vim
 " https://github.com/wellle/context.vim "
 let g:context_enabled = 0
-ContextDisable
 
 " FastFold
 " https://github.com/Konfekt/FastFold "
@@ -96,7 +95,7 @@ let g:ctrlp_tabpage_position = 'l'
 
 " Easymotion
 " https://github.com/easymotion/vim-easymotion "
-nmap s <Plug>(easymotion-s2)
+nmap s <Plug>(easymotion-s)
 nmap / <Plug>(easymotion-sn)
 nmap <N> <Plug>(easymotion-next)
 nmap <S-N> <Plug>(easymotion-prev)
@@ -162,3 +161,14 @@ let g:float_preview#docked = 0
 
 "highlight ALEErrorSign guifg=Red
 "highlight ALEWarningSign guifg=Yellow
+
+" NVIM-LSP
+nnoremap <silent>gd <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent>gD <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<CR>
+
+" NVIM Treesitter
+" https://github.com/nvim-treesitter/nvim-treesitter "
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
+

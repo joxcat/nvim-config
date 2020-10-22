@@ -1,6 +1,8 @@
 scriptencoding utf-8
 " (Force Vim to NOT behave like Vi)
 set nocompatible
+let @/=""
+
 " General Settings
 set encoding=UTF-8
 set backspace=indent,eol,start
@@ -111,6 +113,7 @@ endfun
 
 call SetupCommandAlias("scratchpad", "tabedit scratchpad")
 call SetupCommandAlias("type", "set syntax")
+call SetupCommandAlias("open", "$tabedit")
 
 " Allows you to save files you opened without write permissions via sudo
 cmap w!! w !sudo tee %

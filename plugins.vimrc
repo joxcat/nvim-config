@@ -28,7 +28,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 	"\ 'branch': 'next',
 	"\ 'do': 'bash install.sh',
 	"\ }
-Plug 'neovim/nvim-lsp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
@@ -111,16 +112,16 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " --- Javascript ---
 " Syntax base
-Plug 'othree/yajs.vim'
-" Syntax ES6
-Plug 'othree/es.next.syntax.vim'
-" Auto-import
-Plug 'galooshi/vim-import-js'
-" React JSX
-Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'othree/yajs.vim'
+"" Syntax ES6
+"Plug 'othree/es.next.syntax.vim'
+"" Auto-import
+"Plug 'galooshi/vim-import-js'
+"" React JSX
+"Plug 'maxmellon/vim-jsx-pretty'
 
 " --- VueJS ---
-Plug 'posva/vim-vue'
+"Plug 'posva/vim-vue'
 
 " --- Nim ---
 Plug 'alaviss/nim.nvim'

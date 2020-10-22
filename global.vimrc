@@ -5,6 +5,7 @@ set nocompatible
 set encoding=UTF-8
 set backspace=indent,eol,start
 set ruler
+set lazyredraw
 set number
 set relativenumber
 
@@ -78,6 +79,7 @@ set splitright
 
 "" nmap <C-W> :set wrap<CR>
 "" nmap <C-S-W> :set nowrap<CR>
+:command! C let @/=""
 
 " Go to tab by number
 nmap <silent> <leader>t<Esc> :tabfirst<cr>

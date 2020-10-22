@@ -29,7 +29,8 @@ nmap <leader>r :Rg<cr>
 
 " Context.vim
 " https://github.com/wellle/context.vim "
-let g:context_enabled = 1
+let g:context_enabled = 0
+:ContextDisable
 
 " FastFold
 " https://github.com/Konfekt/FastFold "

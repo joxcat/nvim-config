@@ -22,12 +22,14 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " --- Autocomplete ---
 " Syntax scan
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 " Completion
-Plug 'autozimu/LanguageClient-neovim', {
-	\ 'branch': 'next',
-	\ 'do': 'bash install.sh',
-	\ }
+"Plug 'autozimu/LanguageClient-neovim', {
+	"\ 'branch': 'next',
+	"\ 'do': 'bash install.sh',
+	"\ }
+Plug 'neovim/nvim-lsp'
+
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 " NOTE: you need to install completion sources to get completions. Check
@@ -38,6 +40,8 @@ Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim', { 'for' : 'vim' }
 Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 Plug 'ncm2/float-preview.nvim'
 Plug 'ncm2/ncm2-ultisnips'
+
+Plug 'oncomouse/ncm2-lsp'
 
 " Better comments
 Plug 'scrooloose/nerdcommenter'

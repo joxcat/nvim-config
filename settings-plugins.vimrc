@@ -30,7 +30,7 @@ nmap <leader>r :Rg<cr>
 " Context.vim
 " https://github.com/wellle/context.vim "
 let g:context_enabled = 0
-:ContextDisable
+ContextDisable
 
 " FastFold
 " https://github.com/Konfekt/FastFold "
@@ -115,19 +115,19 @@ highlight clear SignColumn
 
 " LanguageClient-neovim
 " https://github.com/autozimu/LanguageClient-neovim "
-let g:LanguageClient_serverCommands = {
-	\ 'rust': ['$HOME/.local/bin/rust-analyser'],
-	\ 'vue': ['vls'],
-	\ 'javascript': ['$HOME/.asdf/shims/javascript-typescript-stdio'],
-	\ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-	\ 'python': ['$HOME/.asdf/shims/pyls'],
-	\ 'lua.luapad': ['$HOME/.luarocks/bin/lua-lsp'],
-	\ 'lua': ['$HOME/.luarocks/bin/lua-lsp'],
-	\ 'nim': ['$HOME/.nimble/bin/nimlsp'],
-	\ }
-""	\ 'vue': ['vls'],
-let g:LanguageClient_autoStart = 0
-let g:LanguageClient_hasSnippetSupport = 1
+"let g:LanguageClient_serverCommands = {
+	"\ 'rust': ['$HOME/.local/bin/rust-analyser'],
+	"\ 'vue': ['vls'],
+	"\ 'javascript': ['$HOME/.asdf/shims/javascript-typescript-stdio'],
+	"\ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+	"\ 'python': ['$HOME/.asdf/shims/pyls'],
+	"\ 'lua.luapad': ['$HOME/.luarocks/bin/lua-lsp'],
+	"\ 'lua': ['$HOME/.luarocks/bin/lua-lsp'],
+	"\ 'nim': ['$HOME/.nimble/bin/nimlsp'],
+	"\ }
+"""	\ 'vue': ['vls'],
+"let g:LanguageClient_autoStart = 0
+"let g:LanguageClient_hasSnippetSupport = 1
 
 " ncm2
 " https://github.com/ncm2/ncm2 "
@@ -143,22 +143,22 @@ let g:float_preview#docked = 0
 
 " ALE
 " https://github.com/dense-analysis/ale "
-let g:ale_linters_explicit = 1
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_fix_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+"let g:ale_linters_explicit = 1
+"let g:ale_set_loclist = 0
+"let g:ale_set_quickfix = 1
+"let g:ale_fix_on_save = 1
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 0
 
-let g:ale_linters = {
-	\ 'javascript': ['eslint'],
-	\ 'nim': ['nimlsp', 'nimcheck'],
-	\ }
-let g:ale_fixers = {
-	\ '*': ['remove_trailing_lines', 'trim_whitespace'],
-	\ 'javascript': ['eslint'],
-	\ 'nim': ['nimpretty']
-	\ }
+"let g:ale_linters = {
+	"\ 'javascript': ['eslint'],
+	"\ 'nim': ['nimlsp', 'nimcheck'],
+	"\ }
+"let g:ale_fixers = {
+	"\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+	"\ 'javascript': ['eslint'],
+	"\ 'nim': ['nimpretty']
+	"\ }
 
-highlight ALEErrorSign guifg=Red
-highlight ALEWarningSign guifg=Yellow
+"highlight ALEErrorSign guifg=Red
+"highlight ALEWarningSign guifg=Yellow

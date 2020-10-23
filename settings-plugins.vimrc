@@ -167,6 +167,8 @@ nnoremap <silent>gd <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent>gD <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<CR>
 
+autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
 " NVIM Treesitter
 " https://github.com/nvim-treesitter/nvim-treesitter "
 "set foldmethod=expr

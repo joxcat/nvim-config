@@ -6,6 +6,9 @@ augroup rust
 		nmap <M-b> :!cargo build<cr>
 		nmap <M-S-b> :!cargo build --release<cr>
 		nmap <M-f> :%! rustfmt --config hard_tabs=true<cr>
+		" Enable type inlay hints
+		autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+		\ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
 	endfun
 	au! WinEnter,BufEnter *.rs call RustConfig()
 augroup END

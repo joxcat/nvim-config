@@ -112,62 +112,35 @@ inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 " Gitgutter
 highlight clear SignColumn
 
-" LanguageClient-neovim
-" https://github.com/autozimu/LanguageClient-neovim "
-"let g:LanguageClient_serverCommands = {
-	"\ 'rust': ['$HOME/.local/bin/rust-analyser'],
-	"\ 'vue': ['vls'],
-	"\ 'javascript': ['$HOME/.asdf/shims/javascript-typescript-stdio'],
-	"\ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-	"\ 'python': ['$HOME/.asdf/shims/pyls'],
-	"\ 'lua.luapad': ['$HOME/.luarocks/bin/lua-lsp'],
-	"\ 'lua': ['$HOME/.luarocks/bin/lua-lsp'],
-	"\ 'nim': ['$HOME/.nimble/bin/nimlsp'],
-	"\ }
-"""	\ 'vue': ['vls'],
-"let g:LanguageClient_autoStart = 0
-"let g:LanguageClient_hasSnippetSupport = 1
-
-" ncm2
-" https://github.com/ncm2/ncm2 "
-inoremap <c-c> <ESC>
-set shortmess+=c
-"" autocmd User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
-autocmd BufEnter * call ncm2#enable_for_buffer()
-inoremap <expr><CR> pumvisible() ? (complete_info().selected == -1 ? "\<C-y>\<CR>" : "\<C-y>") : "\<CR>"
-inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-let g:float_preview#docked = 0
-
-" ALE
-" https://github.com/dense-analysis/ale "
-"let g:ale_linters_explicit = 1
-"let g:ale_set_loclist = 0
-"let g:ale_set_quickfix = 1
-"let g:ale_fix_on_save = 1
-"let g:ale_lint_on_text_changed = 'never'
-"let g:ale_lint_on_insert_leave = 0
-
-"let g:ale_linters = {
-	"\ 'javascript': ['eslint'],
-	"\ 'nim': ['nimlsp', 'nimcheck'],
-	"\ }
-"let g:ale_fixers = {
-	"\ '*': ['remove_trailing_lines', 'trim_whitespace'],
-	"\ 'javascript': ['eslint'],
-	"\ 'nim': ['nimpretty']
-	"\ }
-
-"highlight ALEErrorSign guifg=Red
-"highlight ALEWarningSign guifg=Yellow
-
 " NVIM-LSP
 nnoremap <silent>gd <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent>gD <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<CR>
 
-autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
+" Completion
+" https://github.com/nvim-lua/completion-nvim "
+"autocmd FileType rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
+"autocmd FileType lua setlocal omnifunc=v:lua.vim.lsp.omnifunc
+"autocmd FileType typescriptreact setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd BufEnter * set omnifunc=v:lua.vim.lsp.omnifunc 
+
+inoremap <c-c> <ESC>
+set shortmess+=c
+inoremap <expr><CR> pumvisible() ? (complete_info().selected == -1 ? "\<C-y>\<CR>" : "\<C-y>") : "\<CR>"
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"let g:float_preview#docked = 0
+let g:completion_enable_snippet = "UltiSnips"
+let g:completion_auto_change_source = 1
+let g:completion_trigger_on_delete = 1
+let g:completion_chain_complete_list = [
+  \{'complete_items': ['lsp', 'snippet']},
+	\{'complete_items': ['path']},
+	\{'complete_items': ['buffers']},
+  \{'mode': '<c-p>'},
+  \{'mode': '<c-n>'}
+\]
 
 " NVIM Treesitter
 " https://github.com/nvim-treesitter/nvim-treesitter "

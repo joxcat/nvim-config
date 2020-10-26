@@ -21,35 +21,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 "" Plug 'sheerun/vim-polyglot'
 
 " --- Autocomplete ---
-" Syntax scan
-" Plug 'w0rp/ale'
-" Completion
-"Plug 'autozimu/LanguageClient-neovim', {
-	"\ 'branch': 'next',
-	"\ 'do': 'bash install.sh',
-	"\ }
 Plug 'neovim/nvim-lspconfig'
+Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
-
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
-" NOTE: you need to install completion sources to get completions. Check
-" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim', { 'for' : 'vim' }
-Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
-Plug 'ncm2/float-preview.nvim'
-Plug 'ncm2/ncm2-ultisnips'
-
-Plug 'oncomouse/ncm2-lsp'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'steelsojka/completion-buffers'
 
 " Better comments
 Plug 'scrooloose/nerdcommenter'
-
-" Autoformat
-"" Plug 'sbdchd/neoformat'
-"" Plug 'Chiel92/vim-autoformat'
 
 " Code Folding
 Plug 'Konfekt/FastFold'
@@ -78,7 +58,6 @@ Plug 'tpope/vim-sleuth'
 "" Plug 'vimwiki/vimwiki'
 
 " Color on colors
-" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Code context

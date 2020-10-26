@@ -105,4 +105,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " --- Nim ---
 Plug 'alaviss/nim.nvim'
 
+" --- Svelte ---
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 call plug#end()

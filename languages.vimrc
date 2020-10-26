@@ -79,3 +79,11 @@ augroup jsconf
 	endfun
 	au! WinEnter,BufEnter *.js call JSConfig()
 augroup END
+
+augroup svelte
+	fun! SvelteConfig()
+		set ts=2 sw=2 noet
+	endfun
+	au! WinEnter,BufEnter *.svelte call SvelteConfig()
+augroup END
+

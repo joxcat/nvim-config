@@ -1,20 +1,25 @@
 local nvim_lsp = require'lspconfig';
 
-local on_attach = function(client)
-    require'completion'.on_attach(client)
-end
+local on_attach = require'completion'.on_attach;
 
 nvim_lsp.tsserver.setup{
+    on_attach=on_attach,
+};
+nvim_lsp.vuels.setup{
     on_attach=on_attach,
 };
 nvim_lsp.rust_analyzer.setup{
     cmd = { "/usr/local/bin/rust-analyser" },
     on_attach=on_attach,
 };
-nvim_lsp.sumneko_lua.setup{
+--nvim_lsp.sumneko_lua.setup{
+    --on_attach=on_attach,
+--};
+nvim_lsp.vimls.setup{
     on_attach=on_attach,
 };
-nvim_lsp.vimls.setup{
+nvim_lsp.nimls.setup{
+    cmd = { "/Users/johan/.nimble/pkgs/nimlsp-0.2.6/nimlsp" },
     on_attach=on_attach,
 };
 

@@ -117,7 +117,8 @@ highlight clear SignColumn
 "autocmd FileType rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
 "autocmd FileType lua setlocal omnifunc=v:lua.vim.lsp.omnifunc
 "autocmd FileType typescriptreact setlocal omnifunc=v:lua.vim.lsp.omnifunc
-autocmd BufEnter * set omnifunc=v:lua.vim.lsp.omnifunc 
+"autocmd BufEnter * set omnifunc=v:lua.vim.lsp.omnifunc 
+autocmd BufEnter * lua require'completion'.on_attach()
 
 inoremap <c-c> <ESC>
 set shortmess+=c

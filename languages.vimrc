@@ -69,6 +69,7 @@ augroup nim
 	fun! NimConfig()
 		nmap <C-B> :call RunWithCurrDir('nimble build')<cr>
 		nmap <C-R> :call RunWithCurrDir('nimble run')<cr>
+		nmap <C-E> :!nim c -r %<cr>
 	endfun
 	au! WinEnter,BufEnter *.nim call NimConfig()
 augroup END

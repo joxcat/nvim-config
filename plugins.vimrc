@@ -51,10 +51,9 @@ Plug 'joshdick/onedark.vim'
 " Indentation help
 Plug 'nathanaelkane/vim-indent-guides'
 " Autodetect indent
-Plug 'tpope/vim-sleuth'
-
-" Local-wiki
-"" Plug 'vimwiki/vimwiki'
+" !TODO TO REPLACE 
+"Plug 'tpope/vim-sleuth'
+Plug 'Raimondi/yaifa'
 
 " Color on colors
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -70,8 +69,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'kassio/neoterm'
 
 " NEOVIM ROAD TO LUA
-" Syntax
-"" Plug 'tjdevries/nlua.nvim'
 " Scratchpad
 Plug 'rafcamlet/nvim-luapad'
 " Lua functions

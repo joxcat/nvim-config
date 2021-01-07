@@ -47,9 +47,9 @@ augroup END
 augroup markdown
 	fun! MardownConfig()
 		" Because of https://github.com/junegunn/goyo.vim/issues/207
-		:call lightline#init()                                                           
+		":call lightline#init()                                                           
 		:Limelight
-		:Goyo
+		":Goyo
 	endfun
 	" https://github.com/junegunn/goyo.vim/issues/207 "
 	au! WinEnter,BufEnter *.md call MardownConfig()

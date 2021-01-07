@@ -59,9 +59,6 @@ Plug 'Raimondi/yaifa'
 " Color on colors
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-" Code context
-Plug 'wellle/context.vim'
-
 " Distraction free markdown
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'

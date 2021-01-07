@@ -46,6 +46,8 @@ augroup END
 
 augroup markdown
 	fun! MardownConfig()
+		" Because of https://github.com/junegunn/goyo.vim/issues/207
+		:call lightline#init()                                                           
 		:Limelight
 		:Goyo
 	endfun

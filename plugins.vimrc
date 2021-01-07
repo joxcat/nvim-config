@@ -26,6 +26,7 @@ Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/completion-nvim'
 Plug 'steelsojka/completion-buffers'
+Plug 'nvim-treesitter/completion-treesitter'
 
 " Better comments
 Plug 'scrooloose/nerdcommenter'

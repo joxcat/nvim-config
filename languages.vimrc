@@ -76,7 +76,7 @@ augroup END
 
 augroup jsconf
 	fun! JSConfig()
-		set ts=2 sw=2 et
+		set ts=4 sw=4 et
 	endfun
 	au! WinEnter,BufEnter *.js call JSConfig()
 augroup END

@@ -7,6 +7,17 @@ nvim_lsp.tsserver.setup{
 };
 nvim_lsp.vuels.setup{
     on_attach=on_attach,
+    init_options={
+        config={
+            vetur={
+                format={
+                    options={
+                        tabSize=2
+                    }
+                }
+            }
+        }
+    }
 };
 nvim_lsp.rust_analyzer.setup{
     cmd = { "/usr/local/bin/rust-analyser" },

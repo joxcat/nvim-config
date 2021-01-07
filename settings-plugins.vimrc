@@ -107,23 +107,19 @@ let g:UltiSnipsJumpBackwardTrigger	= "<c-Right>"
 let g:UltiSnipsExpandTrigger = "<Nop>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
 let g:UltiSnipsSnippetDirectories = ['UltiSnips']
-inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+"inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " Gitgutter
 highlight clear SignColumn
 
 " Completion
 " https://github.com/nvim-lua/completion-nvim "
-"autocmd FileType rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
-"autocmd FileType lua setlocal omnifunc=v:lua.vim.lsp.omnifunc
-"autocmd FileType typescriptreact setlocal omnifunc=v:lua.vim.lsp.omnifunc
-"autocmd BufEnter * set omnifunc=v:lua.vim.lsp.omnifunc 
 autocmd BufEnter * lua require'completion'.on_attach()
 
 inoremap <c-c> <ESC>
 set shortmess+=c
 inoremap <expr><CR> pumvisible() ? (complete_info().selected == -1 ? "\<C-y>\<CR>" : "\<C-y>") : "\<CR>"
-inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr><Tab> pumvisible() ? (complete_info().selected == -1 ? "\<Tab>" : "\<C-n>") : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "let g:float_preview#docked = 0
@@ -131,9 +127,10 @@ let g:completion_enable_snippet = "UltiSnips"
 let g:completion_auto_change_source = 1
 let g:completion_trigger_on_delete = 1
 let g:completion_chain_complete_list = [
-  \{'complete_items': ['lsp', 'snippet']},
+  \{'complete_items': ['snippet']},
+  \{'complete_items': ['lsp', 'ts']},
 	\{'complete_items': ['path']},
-	\{'complete_items': ['buffers']},
+  \{'complete_items': ['buffers']},
   \{'mode': '<c-p>'},
   \{'mode': '<c-n>'}
 \]

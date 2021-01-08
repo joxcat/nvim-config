@@ -100,8 +100,10 @@ nmap <silent> <C-T> :$tabedit scratchpad<cr>
 nmap <silent> <C-W> :tabclose<cr>
 
 " Completion config
-" set completeopt=menu,menuone,preview,noselect,noinsert,longest
-set completeopt=noinsert,menuone,noselect,longest
+"set completeopt=noinsert,menuone,noselect,longest
+set completeopt=menuone,noinsert,noselect
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 " Alias
 fun! SetupCommandAlias(from, to)

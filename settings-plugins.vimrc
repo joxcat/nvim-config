@@ -117,7 +117,6 @@ highlight clear SignColumn
 autocmd BufEnter * lua require'completion'.on_attach()
 
 inoremap <c-c> <ESC>
-set shortmess+=c
 inoremap <expr><CR> pumvisible() ? (complete_info().selected == -1 ? "\<C-y>\<CR>" : "\<C-y>") : "\<CR>"
 inoremap <expr><Tab> pumvisible() ? (complete_info().selected == -1 ? "\<Tab>" : "\<C-n>") : "\<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -134,6 +133,8 @@ let g:completion_chain_complete_list = [
   \{'mode': '<c-p>'},
   \{'mode': '<c-n>'}
 \]
+imap <c-j> <Plug>(completion_next_source) "use <c-j> to switch to previous completion
+imap <c-k> <Plug>(completion_prev_source) "use <c-k> to switch to next completion
 
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>

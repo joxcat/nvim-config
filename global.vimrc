@@ -68,7 +68,7 @@ set cursorline
 set cmdheight=1
 
 " Use system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Change vertical split character to be a space (essentially hide it)
 set fillchars+=vert:.
